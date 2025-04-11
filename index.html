@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Putri Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>POS - Putri Store</h1>
+        <form id="pos-form">
+            <label for="kategori">Kategori:</label>
+            <select id="kategori" name="kategori">
+                <option value="Kuota">Kuota</option>
+                <option value="Akun Premium">Akun Premium</option>
+                <option value="Suntik Followers">Suntik Followers</option>
+                <option value="Aksesoris">Aksesoris</option>
+            </select>
+            
+            <label for="produk">Produk:</label>
+            <input type="text" id="produk" name="produk" required>
+            
+            <label for="harga">Harga:</label>
+            <input type="number" id="harga" name="harga" required>
+
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah" required>
+
+            <button type="submit">Tambah Transaksi</button>
+        </form>
+
+        <h2>Riwayat Transaksi</h2>
+        <table id="transaksi-table">
+            <thead>
+                <tr>
+                    <th>Kategori</th>
+                    <th>Produk</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
