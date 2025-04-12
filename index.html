@@ -11,22 +11,13 @@
     <div class="container">
         <h1>POS - Putri Store</h1>
         <form id="pos-form">
-            <label for="kategori">Kategori:</label>
-            <select id="kategori" name="kategori">
-                <option value="Kuota">Kuota</option>
-                <option value="Akun Premium">Akun Premium</option>
-                <option value="Suntik Followers">Suntik Followers</option>
-                <option value="Aksesoris">Aksesoris</option>
+            <label for="produk">Produk:</label>
+            <select id="produk" name="produk" required>
+                <option value="">-- Pilih Produk --</option>
             </select>
             
-            <label for="produk">Produk:</label>
-            <input type="text" id="produk" name="produk" required>
-            
-            <label for="harga">Harga:</label>
-            <input type="number" id="harga" name="harga" required>
-
             <label for="jumlah">Jumlah:</label>
-            <input type="number" id="jumlah" name="jumlah" required>
+            <input type="number" id="jumlah" name="jumlah" required min="1">
 
             <button type="submit">Tambah Transaksi</button>
         </form>
@@ -35,11 +26,23 @@
         <table id="transaksi-table">
             <thead>
                 <tr>
-                    <th>Kategori</th>
                     <th>Produk</th>
                     <th>Harga</th>
                     <th>Jumlah</th>
                     <th>Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>Stok Barang</h2>
+        <table id="stok-table">
+            <thead>
+                <tr>
+                    <th>Produk</th>
+                    <th>Stok</th>
+                    <th>Harga Modal</th>
+                    <th>Harga Jual</th>
                 </tr>
             </thead>
             <tbody></tbody>
